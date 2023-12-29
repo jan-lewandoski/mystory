@@ -1,0 +1,5 @@
+query PostersGetByOrientation($take: Int!, $orientation: Orientation) {
+	posters(first: $take, where: { orientation: $orientation }) {
+		...PosterItem
+	}
+}

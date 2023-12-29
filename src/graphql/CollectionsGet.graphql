@@ -1,0 +1,5 @@
+query CollectionsGet($take: Int!) {
+	collections(first: $take) {
+		...CollectionItem
+	}
+}

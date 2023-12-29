@@ -1,0 +1,7 @@
+fragment LandingHeroImageItem on LandingHeroImage {
+	id
+	image {
+		url(transformation: { image: { resize: { width: $width, height: $height, fit: clip } } })
+	}
+	alt
+}

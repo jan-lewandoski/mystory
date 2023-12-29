@@ -1,0 +1,5 @@
+query PosterGetBySlug($slug: String!) {
+	poster(where: { slug: $slug }) {
+		...PosterItem
+	}
+}

@@ -1,0 +1,5 @@
+query LandingHeroImagesGet($width: Int, $height: Int) {
+	landingHeroImages {
+		...LandingHeroImageItem
+	}
+}

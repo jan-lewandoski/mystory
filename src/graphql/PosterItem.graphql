@@ -1,0 +1,11 @@
+fragment PosterItem on Poster {
+	id
+	title
+	images {
+		url
+	}
+	currentPrice
+	slug
+	description
+	orientation
+}

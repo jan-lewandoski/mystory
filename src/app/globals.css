@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.max-w-content {
+	max-width: 1080px;
+}
+
+.max-w-header {
+	max-width: 1760px;
+}
+
+.shadow-poster {
+	box-shadow: 0px 0px 5px -3px #000;
+}

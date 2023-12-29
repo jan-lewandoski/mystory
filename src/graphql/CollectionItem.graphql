@@ -1,0 +1,3 @@
+fragment CollectionItem on Collection {
+	name
+}
