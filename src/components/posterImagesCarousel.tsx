@@ -5,7 +5,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import { Circle } from "lucide-react";
 import {
@@ -17,6 +16,7 @@ import {
 	CarouselPrevious,
 } from "./ui/carousel";
 import { Button } from "./ui/button";
+import { PosterGalleryDialog } from "./posterGalleryModal";
 import { type PosterItemFragment } from "@/gql/graphql";
 import { cn } from "@/lib/utils";
 
@@ -26,7 +26,7 @@ interface PosterImagesCarouselProps {
 
 export function PosterImagesCarousel({ poster }: PosterImagesCarouselProps) {
 	const [api, setApi] = React.useState<CarouselApi>();
-	const [current, setCurrent] = React.useState(0);
+	const [current, setCurrent] = React.useState(1);
 	const [count, setCount] = React.useState(0);
 
 	React.useEffect(() => {
@@ -53,7 +53,7 @@ export function PosterImagesCarousel({ poster }: PosterImagesCarouselProps) {
 								"mr-5": poster.orientation === "horizontal" && i < poster.images.length - 1,
 							})}
 						>
-							<Image src={url} alt={poster.title} fill className="object-contain" />
+							<PosterGalleryDialog poster={poster} startIndex={i} />
 						</CarouselItem>
 					))}
 				</CarouselContent>
